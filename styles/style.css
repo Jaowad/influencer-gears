@@ -72,3 +72,20 @@ body{
     display: grid;
     grid-template-columns: repeat(7,1fr);
 }
+
+/* product section */
+
+.product{
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+}
+.product > ul{
+    list-style: none;
+    margin-left: -40px;
+    color: goldenrod;
+}
+.rating li{
+    display: inline;
+}
+

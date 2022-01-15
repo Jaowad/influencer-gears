@@ -38,10 +38,11 @@ body{
 /* banner section */
 
 .banner{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 .banner-details{
-    width: 50%;
+    width: 90%;
 }
 .banner-details h1{
     font-size: 32px;
@@ -53,6 +54,9 @@ body{
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;    
+}
+.banner-image img{
+    width: 70%;
 }
 .banner-image:hover> img{
     transform: scale(1.2);
@@ -76,7 +80,7 @@ body{
     margin-bottom: 50px;
 }
 .logo > ul{
-    margin: 30px;
+    margin: 30px 0;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -160,3 +164,47 @@ body{
     display: inline-block;
     padding-right: 15px;
 }
+
+/*----------
+ media quary
+ ----------- */
+
+ /* mobile device */
+ @media only screen and (max-width:668px) {
+     .container{
+         width: 100%;
+     }
+     .nav-title, .need-to-know{
+         text-align: center;
+     }
+     
+     .banner, .products,.navbar,.need-to-know{
+         grid-template-columns: repeat(1,1fr);
+     }
+     .banner-details{
+         align-items: center;
+         padding: 20px;
+         text-align: center;
+     }
+     .logo > ul{
+         grid-template-columns: repeat(3,1fr);
+     }
+     .product, .banner-details, .banner-image,.need-details,.need-image{
+         flex-direction: column;
+     }
+     
+ }
+
+ /* tablate device */
+
+ @media only screen and (min-width:688px) and (max-width:992px) {
+     .container{
+         width: 100%;
+     }
+     .logo > ul{
+         grid-template-columns: repeat(5,1fr);
+     }
+     .banner, .products{
+         grid-template-columns: repeat(2, 1fr);
+     }
+ }

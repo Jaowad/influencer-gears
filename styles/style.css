@@ -43,13 +43,20 @@ body{
 .banner-details{
     width: 50%;
 }
+.banner-details h1{
+    font-size: 32px;
+}
 .banner-image{
     text-align: right;
     width: 90%;
     background-image: url("/assets/images/Circle-design.svg");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain;
+    background-size: contain;    
+}
+.banner-image:hover> img{
+    transform: scale(1.2);
+    transition: all .5s;
 }
 
 .link-button{
@@ -65,7 +72,9 @@ body{
 }
 
 /* logo section */
-
+.logo{
+    margin-bottom: 50px;
+}
 .logo > ul{
     margin: 30px;
     list-style: none;
@@ -75,10 +84,23 @@ body{
 
 /* product section */
 
+.product-title{
+    margin: 150px 0 70px 0;
+    text-align: center;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    
+}
 .product{
-    border: 1px solid whitesmoke;
+    border: 1px solid rgb(206, 200, 200);
     border-radius: 5px;
     padding: 10px;
+}
+.product img{
+    width: 100%;
 }
 .product > ul{
     list-style: none;
@@ -88,4 +110,53 @@ body{
 .rating li{
     display: inline;
 }
+.see-more{
+    margin-top: 20px;
+    text-align: right;
+}
+.link{
+    text-decoration: none;
+    color: #E02C6D;
+}
 
+/* need to know css */
+
+.need-to-know{
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.need-image img{
+    width: 80%;
+}
+.need-details{
+    text-align: left;
+}
+.join{
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: lavenderblush;
+    border: 1px solid #E02C6D;
+    background-color:#E02C6D ;
+    padding: 10px 20px;
+}
+
+/* footer css */
+
+.footer{
+    text-align: center;
+    color: lightcyan;
+    background-color: indigo;
+}
+.footer-details{
+    padding: 20px;
+}
+.footer-details > ul{
+    list-style: none;
+}
+.footer-details > ul > li{
+    font-size: 25px;
+    display: inline-block;
+    padding-right: 15px;
+}
